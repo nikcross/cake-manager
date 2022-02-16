@@ -1,0 +1,33 @@
+Changes List - as requested as part of this test
+
+
+As requested, made an initial change to the existing project as it was not serving the index.jsp page.
+
+This required the web.xml file to be changed, adding the required xml attributes to the web-app tag, setting the version correctly. This was committed to a bug branch then merged into the master branch once the fix was seen to work.
+
+
+To redevelop the project in a modern way, it was decided to separate the underlying services to list cakes and add cakes into a separate server, implementing the two functions as restful endpoints and redevelop the human interface as a web client in a separate project.
+
+
+The services were redeveloped using SpringBoot with the system further separated into service, controller and domain layers.
+
+
+Lombok was introduced to reduce the amount of boilerplate code required.
+
+
+An initial integration test was created to test that the restful endpoints behaved as expected.
+
+
+Vuejs was chosen for the web client framework, running in as a nodejs based server.
+
+
+The web client was separated into two main elements, a main application and a cake submission form.
+
+
+The two projects are available on github with instructions on running in the readme file of cake-manager
+
+
+https://github.com/nikcross/cake-manager
+
+
+https://github.com/nikcross/cake-manager-web-client
